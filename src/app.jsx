@@ -1,4 +1,4 @@
-import { PageLoading } from '@ant-design/pro-layout';
+import { PageLoading, ProLayout } from '@ant-design/pro-layout';
 import { notification } from 'antd';
 import { history, Link } from 'umi';
 import RightContent from '@/components/RightContent';
@@ -98,34 +98,35 @@ export const request = {
 
 export const layout = ({ initialState }) => {
   return {
-    // rightContentRender: () => <RightContent />,
-    // disableContentMargin: false,
-    // waterMarkProps: {
-    //   content: initialState?.currentUser?.name,
-    // },
-    // footerRender: () => <Footer />,
-    // onPageChange: () => {
-    //   const { location } = history; // 如果没有登录，重定向到 login
+    headerRender: false,
+    rightContentRender: () => <RightContent />,
+    disableContentMargin: false,
+    waterMarkProps: {
+      content: initialState?.currentUser?.name,
+    },
+    footerRender: () => <Footer />,
+    onPageChange: () => {
+      const { location } = history; // 如果没有登录，重定向到 login
 
-    //   if (!initialState?.currentUser && location.pathname !== loginPath) {
-    //     history.push(loginPath);
-    //   }
-    // },
-    // links: isDev
-    //   ? [
-    //       <Link to="/umi/plugin/openapi" target="_blank">
-    //         <LinkOutlined />
-    //         <span>OpenAPI 文档</span>
-    //       </Link>,
-    //       <Link to="/~docs">
-    //         <BookOutlined />
-    //         <span>业务组件文档</span>
-    //       </Link>,
-    //     ]
-    //   : [],
-    // menuHeaderRender: undefined,
-    // // 自定义 403 页面
-    // unAccessible: <div>unAccessible</div>,
-    // ...initialState?.settings,
+      if (!initialState?.currentUser && location.pathname !== loginPath) {
+        history.push(loginPath);
+      }
+    },
+    links: isDev
+      ? [
+          <Link to="/umi/plugin/openapi" target="_blank" key={'LinkOutlined'}>
+            <LinkOutlined />
+            <span>OpenAPI 文档</span>
+          </Link>,
+          <Link to="/~docs" key={'BookOutlined'}>
+            <BookOutlined />
+            <span>业务组件文档</span>
+          </Link>,
+        ]
+      : [],
+    menuHeaderRender: undefined,
+    // 自定义 403 页面
+    unAccessible: <div>unAccessible</div>,
+    ...initialState?.settings,
   };
 };
