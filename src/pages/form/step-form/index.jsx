@@ -62,7 +62,10 @@ const StepForm = () => {
   const [current, setCurrent] = useState(0);
   const formRef = useRef();
   return (
-    <PageContainer content="将一个冗长或用户不熟悉的表单任务分成多个步骤，指导用户完成。">
+    <PageContainer
+      content="将一个冗长或用户不熟悉的表单任务分成多个步骤，指导用户完成。"
+      breadcrumbRender={true}
+    >
       <Card bordered={false}>
         <StepsForm
           current={current}
