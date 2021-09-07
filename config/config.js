@@ -94,6 +94,10 @@ export default defineConfig({
       name: 'form',
       routes: [
         {
+          path: '/form',
+          redirect: '/form/basic-form',
+        },
+        {
           name: 'basic-form',
           icon: 'smile',
           path: '/form/basic-form',

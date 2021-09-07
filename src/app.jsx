@@ -1,4 +1,4 @@
-import { PageLoading } from '@ant-design/pro-layout';
+import { PageLoading, ProBreadcrumb  } from '@ant-design/pro-layout';
 import { notification } from 'antd';
 import { history, Link } from 'umi';
 import RightContent from '@/components/RightContent';
@@ -99,6 +99,7 @@ export const request = {
 
 export const layout = ({ initialState }) => {
   return {
+    headerContentRender: () => <ProBreadcrumb />,
     rightContentRender: () => <RightContent />,
     disableContentMargin: false,
     waterMarkProps: {
