@@ -7,6 +7,7 @@ export default {
   'menu.login': 'ورود',
   'menu.register': 'ثبت نام',
   'menu.register.result': 'ثبت نام نتیجه',
+  'menu.register-result': '我也不知道',
   'menu.dashboard': 'داشبورد',
   'menu.dashboard.analysis': 'تحلیل و بررسی',
   'menu.dashboard.monitor': 'نظارت',
