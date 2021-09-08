@@ -14,7 +14,7 @@ export default defineConfig({
     // https://umijs.org/zh-CN/plugins/plugin-layout
     locale: true,
     siderWidth: 208,
-    ...defaultSettings
+    ...defaultSettings,
   },
   // https://umijs.org/zh-CN/plugins/plugin-locale
   locale: {
@@ -79,6 +79,7 @@ export default defineConfig({
           icon: 'smile',
           path: '/dashboard/monitor',
           component: './dashboard/monitor',
+          access: 'routeVerify',
         },
         {
           name: 'workplace',
