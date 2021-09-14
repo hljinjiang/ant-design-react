@@ -7,6 +7,7 @@ export default {
   'menu.admin.sub-page': 'Sub-Page',
   'menu.register': 'Registro',
   'menu.register.result': 'Resultado de registro',
+  'menu.register-result': '我也不知道',
   'menu.dashboard': 'Dashboard',
   'menu.dashboard.analysis': 'Análise',
   'menu.dashboard.monitor': 'Monitor',

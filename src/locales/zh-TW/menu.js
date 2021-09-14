@@ -10,6 +10,7 @@ export default {
   'menu.exception.500': '500',
   'menu.register': '註冊',
   'menu.register.result': '註冊結果',
+  'menu.register-result': '我也不知道',
   'menu.dashboard': 'Dashboard',
   'menu.dashboard.analysis': '分析頁',
   'menu.dashboard.monitor': '監控頁',
