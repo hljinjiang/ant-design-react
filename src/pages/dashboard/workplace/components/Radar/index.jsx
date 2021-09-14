@@ -9,7 +9,9 @@ class Radar extends Component {
   state = {
     legendData: [],
   };
+
   chart = undefined;
+
   node = undefined;
 
   componentDidMount() {
@@ -50,9 +52,11 @@ class Radar extends Component {
       legendData,
     });
   };
+
   handleRef = (n) => {
     this.node = n;
   };
+
   handleLegendClick = (item, i) => {
     const newItem = item;
     newItem.checked = !newItem.checked;

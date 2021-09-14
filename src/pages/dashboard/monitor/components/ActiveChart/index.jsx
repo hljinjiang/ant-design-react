@@ -24,7 +24,9 @@ export default class ActiveChart extends Component {
   state = {
     activeData: getActiveData(),
   };
+
   timer = undefined;
+
   requestRef = undefined;
 
   componentDidMount() {

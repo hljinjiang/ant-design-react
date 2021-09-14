@@ -25,6 +25,7 @@ import classNames from 'classnames';
 import { useRequest } from 'umi';
 import { queryAdvancedProfile } from './service';
 import styles from './style.less';
+
 const { Step } = Steps;
 const ButtonGroup = Button.Group;
 const menu = (

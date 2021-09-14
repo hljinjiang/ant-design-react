@@ -1,4 +1,5 @@
 import { request } from 'umi';
+
 export async function queryProjectNotice() {
   return request('/api/project/notice');
 }

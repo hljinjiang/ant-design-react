@@ -1,6 +1,7 @@
 import { Axis, Chart, Coord, Geom, Guide, Shape } from 'bizcharts';
 import React from 'react';
 import autoHeight from '../autoHeight';
+
 const { Arc, Html, Line } = Guide;
 
 const defaultFormatter = (val) => {

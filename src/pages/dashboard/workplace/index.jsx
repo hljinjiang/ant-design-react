@@ -6,6 +6,7 @@ import moment from 'moment';
 import EditableLinkGroup from './components/EditableLinkGroup';
 import styles from './style.less';
 import { queryProjectNotice, queryActivities, fakeChartData } from './service';
+
 const links = [
   {
     title: '操作一',

@@ -17,9 +17,13 @@ class TagCloud extends Component {
     height: 0,
     width: 0,
   };
+
   isUnmount = false;
+
   requestRef = 0;
+
   root = undefined;
+
   imageMask = undefined;
 
   componentDidMount() {
@@ -51,9 +55,11 @@ class TagCloud extends Component {
       this.renderChart(this.props);
     });
   };
+
   saveRootRef = (node) => {
     this.root = node;
   };
+
   initTagCloud = () => {
     function getTextAttrs(cfg) {
       return {
@@ -78,6 +84,7 @@ class TagCloud extends Component {
       },
     });
   };
+
   renderChart = Debounce((nextProps) => {
     // const colors = ['#1890FF', '#41D9C7', '#2FC25B', '#FACC14', '#9AE65C'];
     const { data, height } = nextProps || this.props;

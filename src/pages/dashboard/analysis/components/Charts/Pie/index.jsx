@@ -13,8 +13,11 @@ class Pie extends Component {
     legendData: [],
     legendBlock: false,
   };
+
   requestRef = undefined;
+
   root = undefined;
+
   chart = undefined; // for window resize auto responsive legend
 
   resize = Debounce(() => {
@@ -99,9 +102,11 @@ class Pie extends Component {
       legendData,
     });
   };
+
   handleRoot = (n) => {
     this.root = n;
   };
+
   handleLegendClick = (item, i) => {
     const newItem = item;
     newItem.checked = !newItem.checked;

@@ -8,6 +8,7 @@ import Articles from './components/Articles';
 import Applications from './components/Applications';
 import { queryCurrent } from './service';
 import styles from './Center.less';
+
 const operationTabList = [
   {
     key: 'articles',

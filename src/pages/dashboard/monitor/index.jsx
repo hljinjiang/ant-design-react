@@ -7,6 +7,7 @@ import Map from './components/Map';
 import ActiveChart from './components/ActiveChart';
 import { queryTags } from './service';
 import styles from './style.less';
+
 const { Countdown } = Statistic;
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 

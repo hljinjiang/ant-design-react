@@ -17,7 +17,7 @@ function getAutoHeight(n) {
 
   const node = n;
   let height = computeHeight(node);
-  const parentNode = node.parentNode;
+  const { parentNode } = node;
 
   if (parentNode) {
     height = computeHeight(parentNode);
@@ -32,6 +32,7 @@ function autoHeight() {
       state = {
         computedHeight: 0,
       };
+
       root = undefined;
 
       componentDidMount() {

@@ -7,6 +7,7 @@ import { FlowDetailPanel } from './components/EditorDetailPanel';
 import { FlowItemPanel } from './components/EditorItemPanel';
 import { FlowToolbar } from './components/EditorToolbar';
 import styles from './index.less';
+
 GGEditor.setTrackable(false);
 export default () => (
   <PageContainer content="千言万语不如一张图，流程图是表示算法思路的好方法">

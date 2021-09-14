@@ -3,6 +3,7 @@ import { Form, Button, Col, Input, Popover, Progress, Row, Select, message } fro
 import { Link, useRequest, history } from 'umi';
 import { fakeRegister } from './service';
 import styles from './style.less';
+
 const FormItem = Form.Item;
 const { Option } = Select;
 const InputGroup = Input.Group;

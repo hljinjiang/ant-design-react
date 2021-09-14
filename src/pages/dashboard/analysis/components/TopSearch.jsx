@@ -6,6 +6,7 @@ import numeral from 'numeral';
 import NumberInfo from './NumberInfo';
 import Trend from './Trend';
 import styles from '../style.less';
+
 const columns = [
   {
     title: '排名',

@@ -6,6 +6,7 @@ import BindingView from './components/binding';
 import NotificationView from './components/notification';
 import SecurityView from './components/security';
 import styles from './style.less';
+
 const { Item } = Menu;
 
 const Settings = () => {
@@ -38,7 +39,7 @@ const Settings = () => {
         mode = 'horizontal';
       }
 
-      setInitConfig({ ...initConfig, mode: mode });
+      setInitConfig({ ...initConfig, mode });
     });
   };
 

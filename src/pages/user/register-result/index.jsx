@@ -2,6 +2,7 @@ import { Button, Result } from 'antd';
 import { Link } from 'umi';
 import React from 'react';
 import styles from './style.less';
+
 const actions = (
   <div className={styles.actions}>
     <a href="">

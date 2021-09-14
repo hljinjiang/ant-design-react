@@ -10,8 +10,11 @@ class WaterWave extends Component {
   state = {
     radio: 1,
   };
+
   timer = 0;
+
   root = null;
+
   node = null;
 
   componentDidMount() {

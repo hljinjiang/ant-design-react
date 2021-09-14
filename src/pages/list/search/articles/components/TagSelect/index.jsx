@@ -4,6 +4,7 @@ import { Tag } from 'antd';
 import classNames from 'classnames';
 import React from 'react';
 import styles from './index.less';
+
 const { CheckableTag } = Tag;
 
 const TagSelectOption = ({ children, checked, onChange, value }) => (

@@ -5,6 +5,7 @@ import React from 'react';
 import { useRequest } from 'umi';
 import { queryBasicProfile } from './service';
 import styles from './style.less';
+
 const progressColumns = [
   {
     title: '时间',

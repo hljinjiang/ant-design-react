@@ -2,6 +2,7 @@ import { Card, Col, DatePicker, Row, Tabs } from 'antd';
 import { Column } from '@ant-design/charts';
 import numeral from 'numeral';
 import styles from '../style.less';
+
 const { RangePicker } = DatePicker;
 const { TabPane } = Tabs;
 const rankingListData = [];

@@ -8,8 +8,11 @@ class Bar extends Component {
   state = {
     autoHideXLabels: false,
   };
+
   root = undefined;
+
   node = undefined;
+
   resize = Debounce(() => {
     if (!this.node || !this.node.parentNode) {
       return;
@@ -51,6 +54,7 @@ class Bar extends Component {
   handleRoot = (n) => {
     this.root = n;
   };
+
   handleRef = (n) => {
     this.node = n;
   };

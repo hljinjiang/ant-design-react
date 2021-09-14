@@ -12,6 +12,7 @@ import StandardFormRow from './components/StandardFormRow';
 import TagSelect from './components/TagSelect';
 import { queryFakeList } from './service';
 import styles from './style.less';
+
 const { Option } = Select;
 export function formatWan(val) {
   const v = val * 1;

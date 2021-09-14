@@ -40,12 +40,14 @@ class DetailForm extends React.Component {
       });
     }, 0);
   };
+
   handleInputBlur = (type) => (e) => {
     e.preventDefault();
     this.handleFieldChange({
       [type]: e.currentTarget.value,
     });
   };
+
   renderNodeDetail = () => {
     const { label } = this.item.getModel();
     return (
@@ -60,6 +62,7 @@ class DetailForm extends React.Component {
       </Form>
     );
   };
+
   renderEdgeDetail = () => {
     const { label = '', shape = 'flow-smooth' } = this.item.getModel();
     return (
@@ -88,6 +91,7 @@ class DetailForm extends React.Component {
       </Form>
     );
   };
+
   renderGroupDetail = () => {
     const { label = '新建分组' } = this.item.getModel();
     return (

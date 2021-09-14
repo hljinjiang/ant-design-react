@@ -11,6 +11,7 @@ import { EditableProTable } from '@ant-design/pro-table';
 import { PageContainer, FooterToolbar } from '@ant-design/pro-layout';
 import { fakeSubmitForm } from './service';
 import styles from './style.less';
+
 const fieldLabels = {
   name: '仓库名',
   url: '仓库域名',
