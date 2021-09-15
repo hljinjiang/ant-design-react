@@ -1,7 +1,9 @@
-import { PageLoading, ProBreadcrumb } from '@ant-design/pro-layout';
+import { PageLoading } from '@ant-design/pro-layout';
 import { notification } from 'antd';
 import { history, Link } from 'umi';
 import RightContent from '@/components/RightContent';
+import HeaderCenter from '@/components/HeaderBreadcrumb';
+import TagView from '@/components/TagView';
 import Footer from '@/components/Footer';
 import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
@@ -99,8 +101,18 @@ export const request = {
 
 export const layout = ({ initialState }) => {
   return {
-    headerContentRender: () => <ProBreadcrumb />,
-    rightContentRender: () => <RightContent />,
+    // headerContentRender: () => <ProBreadcrumb />,
+    // rightContentRender: () => <RightContent />,
+    headerRender: (route = []) => {
+      return (
+        <div style={{ background: '#fff' }}>
+          <HeaderCenter {...route}>
+            <RightContent />
+          </HeaderCenter>
+          <TagView {...route} />
+        </div>
+      );
+    },
     disableContentMargin: false,
     waterMarkProps: {
       content: initialState?.currentUser?.name,
