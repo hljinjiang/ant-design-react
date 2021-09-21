@@ -33,6 +33,10 @@ export default [
     icon: 'icon-icon_shouye',
     routes: [
       {
+        path: '/dashboard',
+        redirect: '/dashboard/analysis',
+      },
+      {
         name: 'analysis',
         icon: 'smile',
         path: '/dashboard/analysis',

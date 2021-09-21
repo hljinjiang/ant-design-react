@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Breadcrumb } from 'antd';
 import { Link } from 'umi';
+import TagView from '@/components/TagView';
 import styles from './index.less';
 
 const HeaderBreadcrumb = (props) => {
@@ -35,10 +36,13 @@ const HeaderBreadcrumb = (props) => {
 class HeaderCenter extends Component {
   render() {
     return (
-      <div className={styles.header}>
-        <HeaderBreadcrumb {...this.props} />
-        {this.props.children}
-      </div>
+      <>
+        <div className={styles.header}>
+          <HeaderBreadcrumb {...this.props} />
+          {this.props.right}
+        </div>
+        <TagView {...this.props} />
+      </>
     );
   }
 }

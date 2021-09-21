@@ -3,7 +3,6 @@ import { notification } from 'antd';
 import { history, Link } from 'umi';
 import RightContent from '@/components/RightContent';
 import HeaderCenter from '@/components/HeaderBreadcrumb';
-import TagView from '@/components/TagView';
 import Footer from '@/components/Footer';
 import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
@@ -104,14 +103,7 @@ export const layout = ({ initialState }) => {
     // headerContentRender: () => <ProBreadcrumb />,
     // rightContentRender: () => <RightContent />,
     headerRender: (route = []) => {
-      return (
-        <div style={{ background: '#fff' }}>
-          <HeaderCenter {...route}>
-            <RightContent />
-          </HeaderCenter>
-          <TagView {...route} />
-        </div>
-      );
+      return <HeaderCenter {...route} right={<RightContent />} />;
     },
     disableContentMargin: false,
     waterMarkProps: {
