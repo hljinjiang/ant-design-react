@@ -33,10 +33,12 @@ const HeaderBreadcrumb = (props) => {
   );
 };
 
+// 自定义导航条
 class HeaderCenter extends Component {
   render() {
     return (
       <>
+        {/* header左侧面包屑，右侧头像，下侧路由导航栏 */}
         <div className={styles.header}>
           <HeaderBreadcrumb {...this.props} />
           {this.props.right}
