@@ -18,8 +18,10 @@ class TagView extends Component {
 
   componentDidUpdate() {
     const route = this.props;
-    console.log(!this.state.list.includes(route.location.pathname));
-    if (!this.state.list.includes(route.location.pathname)) {
+    if (
+      !this.state.list.includes(route.location.pathname) &&
+      !route.breadcrumb[route.location.pathname]['children']
+    ) {
       this.setState({
         list: [...this.state.list, route.location.pathname],
       });
@@ -53,7 +55,6 @@ class TagView extends Component {
         history.push(this.state.list[idx - 1]);
       }
       list.splice(idx, 1);
-      console.log(list);
       this.setState({ list });
     }
   };
